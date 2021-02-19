@@ -5,6 +5,7 @@ const Div = styled.div`
   display: flex;
   margin: 1%;
   flex-direction: column;
+  min-height: 29rem;
   background-color: ${(props) => props.theme.colors.backgroundCard};
   border-radius: ${(props) => props.theme.measures.cardRadius};
 `;
@@ -25,6 +26,9 @@ const A = styled.a`
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 0;
   padding-bottom: 0;
+  &:hover {
+    color: ${(props) => props.theme.colors.textFocus};
+  }
 `;
 
 const H2 = styled.h2`

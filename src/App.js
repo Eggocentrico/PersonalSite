@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import themes from "./utils/theme";
 //COMPONENTS
 import Navbar from "./components/Navbar";
@@ -13,8 +13,20 @@ import Home from "./routes/Home";
 const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
+    height: 100vh;
     font-family: 'Montserrat';
   }
+  #root {
+    height: 100%;
+  }
+  * {
+    transition: color 0.25s ease-out, background-color 0.25s ease-out;
+  }
+`;
+
+const SHome = styled(Home)`
+  margin: 0;
+  padding: 0;
 `;
 
 export default function App() {
@@ -36,7 +48,7 @@ export default function App() {
             <Contact></Contact>
           </Route>
           <Route path="/">
-            <Home></Home>
+            <SHome></SHome>
           </Route>
         </Switch>
       </Router>

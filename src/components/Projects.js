@@ -15,6 +15,12 @@ const projects = [
     img: "https://imgur.com/QFLquSU.png",
     desc: "A little app that fetchs jokes on an api and displays them",
   },
+  {
+    name: "Combos apps",
+    url: "/",
+    img: "https://imgur.com/88A0SOK.png",
+    desc: "Some apps i made to make my work easier at Combos",
+  },
 ];
 
 const Div = styled.div`

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const links = [
   { path: "/contact", name: "Contact" },
-  { path: "/about", name: "About" },
+  // { path: "/about", name: "About" },
 ];
 
 const Ul = styled.ul`
@@ -28,6 +28,9 @@ const Button = styled.button`
 export const SLink = styled(Link)`
   color: ${(props) => props.theme.colors.text};
   text-decoration: none;
+  &:hover {
+    color: ${(props) => props.theme.colors.textFocus};
+  }
 `;
 
 export default function Links({ themeIndex, setThemeIndex }) {
